@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav id = "nav1" class="navbar navbar-expand-lg navbar-dark" style="background-color: #ff0000;">
+        <div class="container">
+          <a class="nav-pg navbar-brand ms-1" href="home.html">YOUTUBE VIDEO ANALYZER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarText" >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item ps-2">
+                <a class="nav-bg nav-link" aria-current="page" href="aboutTool.html">ABOUT TOOL</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="mainPage container">
+        <h2>About Youtube Video Analyzer Tool</h2>
+        <div class = "aboutTool">
+            <div class = "longExpl"> 
+              Youtube video analyzer tool takes an input Youtube URL and a phrase as an input and spits useful statistic about the video, namely: 
+              <ul class = "bltpoints">
+                <li>Phrase search: Timestamps in which the input phrase occured on a video </li>
+                <li>Profanities: Detected profanities in the video with their corresponding timestamps</li>
+                <li>Word statistics: The ordered table of words, ordered based on the number of times the word occured on a video. 
+                  Stop words such as 'I', 'me', 'do' are filtered out of the statistics. </li>
+                <li>Matching videos: Everytime someone uses our tool, the output statistics of a video is saved in our database. 
+                  We check these existing database records to output Youtube URLs in which the phrase was detected. </li>
+              </ul>
+              
+            </div>
+        </div>
+
+        <h3 class="aboutToolHeaders">
+            Benefits
+        </h3>
+        <div>
+            Other than verifying how many times Joe Rogan says "wow" in his podcast, the Youtube Video Analyzer can also be utilized by Youtubers for obtaining useful stats 
+            about their videos. For example, using "phrase search" or "profanity detection" functionalities, they may want to validate 
+            that no profanities against the Youtube guidelines are used on their videos. The YouTuber may also want to check the extent to which the use of a certain word (eg. Subscribe) leads 
+            to a higher like or subscription count. 
+        </div>
+
+        <h3 class="limitations aboutToolHeaders">
+            Limitations
+        </h3>
+        <div class = "limitationExpl">
+            The main limitation of the tool is the high amount of time it takes to process the request and display the output. This is due the fact that the offline speech-to-text conversion
+            model is used instead of more powerful and faster online models such as the one developed by Google. The reasoning behind choosing an offline model is that it is free to use,
+            compared to much costlier online models. 
+        </div>
+    
+        <div>
+            
+        </div>
+
+    </div>
+    <footer class="bg-red-color py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Give Feedback</h4>
+              <form action="submit-feedback.php" method="post">
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="giveFeedback btn btn-dark">Submit</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h4>About Us</h4>
+              <p>Youtube Video Analyzer tool was developed as a fun side project by me, Parviz, who is currently working in the Netherlands as a software engineer. 
+                <br>The backend of the website was developed in NodeJS framework, and the offline Language recognition model Vosk was used for audio to text conversion.
+                <br>If you have any questions or feedback about the website, please don't hesitate to contact me through a feedback form or social media links provided.
+              </p>
+              <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="https://www.facebook.com/parviz.ahmedov.3"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="https://www.instagram.com/parviz_4488/"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/in/parviz-ahmadov72/"
+        role="button"
+        ><i class="fa-brands fa-linkedin-in"></i></a>
+      <!-- Github -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333;"
+        href="https://github.com/parepic"
+        role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+        
+    </body>
+
+    <script>
+    </script>
+    
+
+    </html>
