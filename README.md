@@ -1,6 +1,6 @@
 # YoutubeVideoAnalyzer
 
-Youtube video analyzer tool is a web app that takes an input Youtube URL and a phrase as input and spits useful statistics about the video, namely:
+Youtube audio analyzer tool is a web app that takes an input Youtube URL and a phrase as input and spits useful statistics about the video, namely:
 
 - Phrase search: Timestamps in which the input phrase occured on a video
 - Profanities: Detected profanities in the video with their corresponding timestamps
